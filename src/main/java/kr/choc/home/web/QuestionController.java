@@ -17,7 +17,7 @@ public class QuestionController {
 	@GetMapping("/questions")
 	public String show(Model model) {
 		model.addAttribute("questions", questions);
-		return "redirect:/index_test.html";
+		return "redirect:/index.html";
 	}
 	
 	@PostMapping("/qna/question")
@@ -27,9 +27,9 @@ public class QuestionController {
 		return "redirect:/questions";
 	}
 	
-	@GetMapping("/index_test.html")
+	@GetMapping("/index.html")
 	public String index(Model model) {
 		model.addAttribute("questions", questions);
-		return "/index_test";
+		return "/index";
 	}
 }
